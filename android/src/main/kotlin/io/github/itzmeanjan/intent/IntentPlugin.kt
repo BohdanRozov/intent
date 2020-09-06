@@ -144,6 +144,10 @@ class IntentPlugin(private val registrar: Registrar, private val activity: Activ
                                             val tmp = it.value as ArrayList<*>
                                             intent.putExtra(it.key, tmp.toArray(arrayOfNulls<String>(tmp.size)))
                                         }
+                                        "Uri" -> {
+                                            val tmp = it.value as String
+                                            intent.putExtra(it.key, Uri.parse(tmp))
+                                        }
                                         // if some unsupported type information supplied by user
                                         else -> intent.putExtra(it.key, it.value as String)
                                     }

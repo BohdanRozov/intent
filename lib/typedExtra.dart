@@ -47,4 +47,6 @@ class TypedExtra {
   static const String charListExtra = "char[]";
 
   static const String stringListExtra = "String[]";
+
+  static const String uriExtra = "Uri";
 }
